@@ -18,11 +18,15 @@ random.seed(a)
 # Plot I vs Number of points (N)
 x = []
 points = []
+points2 = []
 while(len(points)<N):
     i = random.uniform(0,1)
+    j = random.uniform(0,1)
     points.append(i)
+    points2.append(j)
     points_ans = np.array(points)
-    points_ans = 3*np.square((points_ans))
+    points_ans2 = np.array(points2)
+    points_ans = np.square((points_ans))*points_ans2
 
     x.append(V*np.average(points_ans))
 
@@ -34,14 +38,15 @@ plt.show()
 x = []
 for i in range(1,100):
     points = np.random.uniform(0,1,20)
-    points = 3*np.square((points))
+    points2 = np.random.uniform(0,1,20)
+    points = np.square((points))*points2
     x.append(V*np.average(points))
 
 # standard deviation
-print(math.sqrt(np.var(x)))
+x = np.array(x)
+print("standard deviation for N=20: ",math.sqrt(np.var(x)))
 plt.plot(x)
 plt.show()
-x = np.array(x)
 
 
 
@@ -49,14 +54,15 @@ x = np.array(x)
 x = []
 for i in range(1,100):
     points = np.random.uniform(0,1,1000)
-    points = 3*np.square((points))
+    points2 = np.random.uniform(0,1,1000)
+    points = np.square((points))*points2
     x.append(V*np.average(points))
 
 # standard deviation
-print("standard deviation : ", math.sqrt(np.var(x)))
+x = np.array(x)
+print("standard deviation for N=1000: ", math.sqrt(np.var(x)))
 plt.plot(x)
 plt.show()
-x = np.array(x)
 
 
 # standard deviation for fixed number number of trials vs N
@@ -67,7 +73,8 @@ for i in range(1,n+1):
     I = []
     for j in range(trials):
         points = np.random.uniform(0,1,i)
-        points = 3*np.square((points))
+        points2 = np.random.uniform(0,1,i)
+        points = np.square((points))*points2
         I.append(V*np.average(points))
     I = np.array(I)
     x.append(math.sqrt(np.var(I)))
