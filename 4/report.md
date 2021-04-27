@@ -11,3 +11,9 @@ Dx = 9, Dy = 4
 ## Dx < Dy
 Dx = 4, Dy = 9
 ![](./images/ygret.png)
+
+
+### External Libraries:
+
+- Numpy
+- matplotlib

@@ -1,3 +1,16 @@
+# To Run
+
+```
+pip install -r requirements.txt
+python drunk.py
+```
+
+### External Libraries:
+
+- matplotlib
+
+
+
 # Code Explanation
 
 ## Question 1

@@ -1,7 +1,6 @@
 import random
 import time
 import numpy as np
-import matplotlib.pyplot as plt
 import math
 
 random.seed(time.time())
@@ -121,6 +120,7 @@ while(num<108):
         init_state.append(new_coor)
         num+=1
 # print(init_state)
+print("initial energy of the configuration is ",find_potential(init_state))
 ff = open("initial.xyz", 'w')
 for i in init_state:
     print('C '+str(i[0])+' '+str(i[1])+' '+str(i[2]), file = ff)
