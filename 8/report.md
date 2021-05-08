@@ -1,4 +1,4 @@
-# Predator pery model
+# Predator prey model
 
 Here we solve the predator prey model and draw graphs using Euler time stepping method. The values we take are
 
